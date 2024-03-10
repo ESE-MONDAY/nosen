@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 
-export default function DashboardLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
