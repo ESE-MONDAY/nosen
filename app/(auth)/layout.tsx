@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Playfair } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/Header";
+import { Inter } from "next/font/google";
+import '../globals.css'
+
 
 const inter = Inter({ subsets: ["latin"] });
-
-const playfair = Playfair({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Nosen: Flexible payroll solution for businesses in Africa.",
@@ -20,8 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        {children}</body>
+        {children}
+        </body>
     </html>
   );
 }

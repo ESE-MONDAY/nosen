@@ -12,7 +12,6 @@ const Sidebar = () => {
 
   const path = usePathname();
 
-
   const NavLinks = [
     {
         name: "Dashboard",
@@ -22,7 +21,7 @@ const Sidebar = () => {
     {
         name: "Invoicing",
         icon: <FaFileInvoiceDollar />,
-        href: "/dashboard/invoicing",
+        href: "/invoicing",
     },
     {
         name: "Payments",
@@ -32,7 +31,7 @@ const Sidebar = () => {
     {
         name: "Payroll & Expenses",
         icon: <FaMoneyBillWheat />,
-        href: "/dashboard/payroll",
+        href: "/payroll",
     },
     {
         name: "Settings",

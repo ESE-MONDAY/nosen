@@ -1,22 +1,49 @@
+"use client"
 import React from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { PrimaryButton } from './shared/Buttons/button'
+
+const Routes = [
+  {
+    id:1,
+    name: "solutions",
+    href: "/solutions"
+  },
+  {
+    id: 2,
+    name:"usecase",
+    href: "/usecase"
+  },
+  {
+    id:3,
+    name: "pricing",
+    href: "/pricing"
+
+  },
+  {
+    id: 4,
+    name: "resources",
+    href: "/resources"
+  }
+]
 
 
 const Header = () => {
+  const pathname = usePathname()
   return (
     <div className=''>
-        <div className='max-w-[1560px] w-full flex justify-between px-8 py-2 sticky'>
+        <div className='max-w-[1560px] w-full flex justify-around px-8 py-2 sticky'>
         <Link href="/" className="text-2xl font-bold">Nosen.</Link>
         <div className='flex gap-8 items-center'>
-            <p>Solutions</p>
-            <p>UseCases</p>
-            <p>Pricing</p>
-            <p>Resources</p>
+          {Routes.map((route,index) => (
+            <Link key={index} href={route.href} className={`capitalize transition-all ${pathname === route.href && "bg-red-500 px-4 py-1"}`}>{route.name}</Link>
+          ))}
         </div>
         <div className='flex gap-4 items-center'>
          
-            <button>Login</button>
-            <button className='bg-cta-button-default hover:bg-cta-button-hover text-white rounded-sm sm:rounded-md px-8 py-2 flex items-center'>Get Started</button>
+            <Link href="/login">Login</Link>
+            <PrimaryButton>Get Started</PrimaryButton>
         </div>
 
         </div>

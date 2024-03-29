@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-const Dasboard = () => {
+const Dashboard = () => {
   return (
     <div className='p-8'>
         <h1 className='text-3xl font-bold text-body-text'> 👋 Hey Ese</h1>
@@ -103,4 +103,4 @@ const Dasboard = () => {
   )
 }
 
-export default Dasboard
+export default Dashboard
